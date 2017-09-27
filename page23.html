@@ -1,0 +1,311 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- 指定为谷歌内核 -->
+<meta name="renderer" content="webkit">
+<!-- 指定最新的ie内核 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/cui.css" rel="stylesheet"/>
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/cui.js"></script>
+<title>投诉建议处理</title>
+</head>
+<link rel="stylesheet" href="css/style.css">
+<style>
+</style>
+<body>
+	<div class="top_menu">
+    	<div class="top_left">
+        	<img class="top_left_img1" src="images/logo.png">
+            <img class="top_left_img2" src="images/tittle.png">
+        </div>
+        <!--导航菜单-->
+        <div class="top_middle">
+        	<span class="menu_1">系统管理<img src="images/btn.png"></span>
+        	<span class="menu_2">价格信息采集<img src="images/btn.png"></span>
+        	<span class="menu_3">价格信息查询<img src="images/btn.png"></span>
+        	<span class="menu_4">价格预警<img src="images/btn.png"></span>
+        	<span class="menu_5">价格信息综合分析<img src="images/btn.png"></span>
+        </div>
+        <!--隐藏菜单-->
+        <div class="middle_menu_1">
+        	<a href="">用户管理</a>
+        	<a href="">角色管理</a>
+        	<a href="">菜单管理</a>
+        	<a href="">角色菜单管理</a>
+        	<a href="">市场设置</a>
+        	<a href="">商品设置</a>
+        	<a href="">代码维护</a>
+        	<a href="">任务设定及下发</a>
+        	<a href="">登录系统</a>
+        </div>
+        <div class="middle_menu_2">
+        	<a href="">批发价格填报</a>
+        	<a href="">价格数据审核</a>
+        </div>
+        <div class="middle_menu_3">
+        	<a href="">批发价格查询</a>
+        	<a href="">批发市场小类旬成交量分析</a>
+        	<a href="">批发市场小类月成交量分析</a>
+        	<a href="">批发市场大类旬成交量分析</a>
+        	<a href="">批发市场大类月成交量分析</a>
+        	<a href="">批发市场大类价格数据旬分析</a>
+        	<a href="">批发市场大类价格数据月分析</a>
+        	<a href="">批发市场小类月价格分析</a>
+        	<a href="">批发市场小类年价格分析</a>
+        	<a href="">批发市场大类月价格分析</a>
+        	<a href="">批发市场大类年价格分析</a>
+        </div>
+        <div class="middle_menu_4">
+        	<a href="">预警规则设置</a>
+        	<a href="">投诉建议处理</a>
+        	<a href="">价格预警和短信发送</a>
+        	<a href="">农产品价格短信预警（接口调用）</a>
+        </div>
+        <div class="middle_menu_5">
+        	<a href="">历年农产品价格同比分析</a>
+        	<a href="">农产品价格周期预测</a>
+        	<a href="">农产品价格走势预测</a>
+        	<a href="">市场横向对比分析</a>
+        	<a href="">涨跌预警</a>
+        	<a href="">采集任务预警</a>
+        	<a href="">采集任务情况分析</a>
+        	<a href="">济南市农产品价格周报</a>
+        	<a href="">济南市农产品价格月报</a>
+        	<a href="">济南市农产品价格年报</a>
+        	<a href="">行情简报</a>
+        	<a href="">气温与价格走势智能分析</a>
+        	<a href="">农产品进出口价格信息分析</a>
+        	<a href="">各国农产品进出口情况信息分析</a>
+        </div>
+        <!--个人设置-->
+        <div class="top_right">
+        	<a class="set_btn">
+            	<img src="images/user.png">
+                <span>admin超级管理员</span>
+            </a>
+            <div class="set_div">
+            	<a href="#">
+                    <img src="images/set.png">
+                    <span>账户管理</span>
+                </a>
+            	<a href="#">
+                    <img src="images/reset.png">
+                    <span>系统切换</span>
+                </a>
+            	<a href="#">
+                    <img src="images/out.png">
+                    <span>退出</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <style>
+		
+	</style>
+    <!--内容部分-->
+    <div style="width:100%;">
+    	<div class="main_head">
+        	<img src="images/localion.png">
+            <span>当前位置：投诉建议处理</span>
+        </div>
+		<div class="main_form">
+            <div class="col2">
+                <label style="margin-right:30px;width:8%;" class="main_label">投诉人</label>
+                <input style="width:15%;" id="textbox1" name="textbox1" >
+                <label style="margin:0 30px;" >投诉电话</label>
+                <input id="textbox2" name="textbox2" >
+                <label style="margin:0 30px;">投诉时间(起始)</label>
+                <input id="datepicker1" name="datepicker" value="2016-10-12">
+                <label style="margin:0 30px;">投诉时间(结束)</label>
+                <input id="datepicker2" name="datepicker" value="2017-03-12">
+            </div>
+            <div class="col4">
+                <label style="margin-right:27px;width:6.5%;" class="main_label">投诉标题</label>
+                <input style="width:46.5%;height:24px;border:none;border:1px solid #c4c4c4;padding:1px 12px;border-radius:3px" name="textbox3" >
+                <button style="margin-top:0;margin-left:30px;" id="button1" class="main_btn">查询</button>
+            </div>
+           
+        </div>
+        
+    <div>
+    	<div>
+            <table class="table table-bordered table-fixed" style="width:95%;margin:0 auto">
+            	<tr>
+                	<th>序号</th>
+                	<th>投诉标题</th>
+                	<th>投诉人</th>
+                	<th>问题分类</th>
+                	<th>联系电话</th>
+                    <th>投诉时间</th>
+                    <th>受理人</th>
+                    <th>受理</th>
+                </tr>
+                <tr>
+                	<td>1</td>
+                	<td>市场信息处</td>
+                	<td>王二</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>李四</td>
+                	<td><a class="xg" href="#"></a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>市场信息处</td>
+                    <td>王二</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>李四</td>
+                    <td><a class="xg" href="#"></a></td>
+                </tr>
+                <tr>
+                	<td>3</td>
+                    <td>市场信息处</td>
+                    <td>王二</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>李四</td>
+                    <td><a class="xg" href="#"></a></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>市场信息处</td>
+                    <td>王二</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>李四</td>
+                    <td><a class="xg" href="#"></a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="tc11">
+        <div class="title">
+            <p>新增/修改</p>
+            <img id="close" src="images/close.png" />
+        </div>
+        <div class="text1">
+            <div class="row1">
+                <label>投诉人:</label>
+                <input type="text" disabled name="" value="张三">
+            </div>
+            <div class="row1">
+                <label>投诉人电话:</label>
+                <input type="text" name="" value="18555555555">
+            </div>
+            <div class="row1">
+                <label>行政组织:</label>
+                <input type="text" name="" value="XX镇XX村">
+            </div>
+        </div>
+        <div class="text1">
+            <div class="row1">
+                <label>投诉时间:</label>
+                <input type="text" name="" >
+            </div>
+        </div>
+        <div class="text1">
+            <div class="row2">
+                <label>投诉标题</label>
+                <input type="text" disabled name="">
+            </div>
+        </div>
+        <div class="text2">
+            <p class="title1">投诉内容：</p>
+            <textarea disabled></textarea>
+        </div>
+        <div class="text2">
+            <p class="title1">答复内容：</p>
+            <textarea></textarea>
+        </div>
+        <div class="text1" style="background: #344563;">
+            <p class="title1">告知方式：</p>
+            <input type="radio"  />
+            <label style="margin:0 5px 0 5px;color:#fff">电话</label>
+            <input style="margin:5px 0 0 50px "  type="radio"/>
+            <label style="margin:0 5px 0 5px;color:#fff">短信</label>
+        </div>
+        <div class="btnbox">
+            <button class="main_btn" id="button3">提交</button>
+            <button class="main_btn" id="button4">取消</button>
+        </div>
+    </div>
+    <!--copyright-->
+    <div class="page_foot">技术支持：上海中信信息发展股份有限公司</div>
+    
+    <script type="text/javascript">
+		$(document).ready(function(){
+			$(".set_btn").click(function(){
+				$(".set_div").toggle(300);
+			});
+			$(".menu_1").click(function(){
+				$(".middle_menu_1").toggle(100);
+				$(".middle_menu_2,.middle_menu_3,.middle_menu_4,.middle_menu_5").hide();
+			});
+			$(".menu_2").click(function(){
+				$(".middle_menu_2").toggle(100);
+				$(".middle_menu_1,.middle_menu_3,.middle_menu_4,.middle_menu_5").hide();
+			});
+			$(".menu_3").click(function(){
+				$(".middle_menu_3").toggle(100);
+				$(".middle_menu_1,.middle_menu_2,.middle_menu_4,.middle_menu_5").hide();
+			});
+			$(".menu_4").click(function(){
+				$(".middle_menu_4").toggle(100);
+				$(".middle_menu_1,.middle_menu_2,.middle_menu_3,.middle_menu_5").hide();
+			});
+			$(".menu_5").click(function(){
+				$(".middle_menu_5").toggle(100);
+				$(".middle_menu_1,.middle_menu_2,.middle_menu_3,.middle_menu_4").hide();
+			});
+		});
+		
+		$('#combobox1').combobox({
+			valueField:'value',
+			textField:'text',
+			data:[{
+				"value":1,
+				"text":"全部市场"
+			},{
+				"value":2,
+				"text":"部分市场"
+			}]
+		});
+		  $('#textbox1,#textbox2,#textbox3,#textbox4').textbox({
+            readonly:false,
+            componentCls:'dm1'
+        });
+        $('#datepicker1,#datepicker2').datepicker({
+            readonly:false,
+            componentCls:'dm2'
+        });
+        $('#button1').button();
+        $('#button2').button();
+        $('#button3').button();
+        $('#button4').button();
+        $('#button5').button();
+		$('#checkbox0').checkbox();
+        $('#checkbox1').checkbox();
+
+        // 弹出框
+        $(".table tr a.xg").click(function(){
+            $(".tc11").show();
+        });
+        $("#close,#button4").click(function(){
+            $(".tc11").hide();
+        })
+        $("#button3").click(function(){
+            alert("提交成功");
+            $(".tc11").hide();
+        })
+	</script>
+</body>
+</html>

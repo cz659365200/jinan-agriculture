@@ -1,0 +1,362 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- 指定为谷歌内核 -->
+<meta name="renderer" content="webkit">
+<!-- 指定最新的ie内核 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/cui.css" rel="stylesheet"/>
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/cui.js"></script>
+<title>商品设置</title>
+</head>
+<link rel="stylesheet" href="css/style.css">
+<style>
+
+</style>
+<body>
+	<div class="top_menu">
+    	<div class="top_left">
+        	<img class="top_left_img1" src="images/logo.png">
+            <img class="top_left_img2" src="images/tittle.png">
+        </div>
+        <!--导航菜单-->
+        <div class="top_middle">
+        	<span class="menu_1">系统管理<img src="images/btn.png"></span>
+        	<span class="menu_2">价格信息采集<img src="images/btn.png"></span>
+        	<span class="menu_3">价格信息查询<img src="images/btn.png"></span>
+        	<span class="menu_4">价格预警<img src="images/btn.png"></span>
+        	<span class="menu_5">价格信息综合分析<img src="images/btn.png"></span>
+        </div>
+        <!--隐藏菜单-->
+        <div class="middle_menu_1">
+        	<a href="">用户管理</a>
+        	<a href="">角色管理</a>
+        	<a href="">菜单管理</a>
+        	<a href="">角色菜单管理</a>
+        	<a href="">市场设置</a>
+        	<a href="">商品设置</a>
+        	<a href="">代码维护</a>
+        	<a href="">任务设定及下发</a>
+        	<a href="">登录系统</a>
+        </div>
+        <div class="middle_menu_2">
+        	<a href="">批发价格填报</a>
+        	<a href="">价格数据审核</a>
+        </div>
+        <div class="middle_menu_3">
+        	<a href="">批发价格查询</a>
+        	<a href="">批发市场小类旬成交量分析</a>
+        	<a href="">批发市场小类月成交量分析</a>
+        	<a href="">批发市场大类旬成交量分析</a>
+        	<a href="">批发市场大类月成交量分析</a>
+        	<a href="">批发市场大类价格数据旬分析</a>
+        	<a href="">批发市场大类价格数据月分析</a>
+        	<a href="">批发市场小类月价格分析</a>
+        	<a href="">批发市场小类年价格分析</a>
+        	<a href="">批发市场大类月价格分析</a>
+        	<a href="">批发市场大类年价格分析</a>
+        </div>
+        <div class="middle_menu_4">
+        	<a href="">预警规则设置</a>
+        	<a href="">投诉建议处理</a>
+        	<a href="">价格预警和短信发送</a>
+        	<a href="">农产品价格短信预警（接口调用）</a>
+        </div>
+        <div class="middle_menu_5">
+        	<a href="">历年农产品价格同比分析</a>
+        	<a href="">农产品价格周期预测</a>
+        	<a href="">农产品价格走势预测</a>
+        	<a href="">市场横向对比分析</a>
+        	<a href="">涨跌预警</a>
+        	<a href="">采集任务预警</a>
+        	<a href="">采集任务情况分析</a>
+        	<a href="">济南市农产品价格周报</a>
+        	<a href="">济南市农产品价格月报</a>
+        	<a href="">济南市农产品价格年报</a>
+        	<a href="">行情简报</a>
+        	<a href="">气温与价格走势智能分析</a>
+        	<a href="">农产品进出口价格信息分析</a>
+        	<a href="">各国农产品进出口情况信息分析</a>
+        </div>
+        <!--个人设置-->
+        <div class="top_right">
+        	<a class="set_btn">
+            	<img src="images/user.png">
+                <span>admin超级管理员</span>
+            </a>
+            <div class="set_div">
+            	<a href="#">
+                    <img src="images/set.png">
+                    <span>账户管理</span>
+                </a>
+            	<a href="#">
+                    <img src="images/reset.png">
+                    <span>系统切换</span>
+                </a>
+            	<a href="#">
+                    <img src="images/out.png">
+                    <span>退出</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <style>
+		
+	</style>
+    <!--内容部分-->
+    <div style="width:100%;">
+    	<div class="main_head">
+        	<img src="images/localion.png">
+            <span>当前位置：商品设置</span>
+        </div>
+		<div class="main_form">
+            <div class="main_content">
+                <div style="width:20%;" class="main_content_left">
+                    <ul id="cc"></ul>
+                </div>
+                <div style="width:80%;" class="main_content_right">
+                    <div class="btn_box1">
+                        <button id="button1" >增加商品</button>
+                        <button style="background:#f0851c" id="button2" >保存修改</button>
+                        <button id="button3" >停用商品</button>
+                    </div>
+                    <div class="list1">
+                        <p>商品设置</p>    
+                        <div class="row">      
+                            <div>    
+                                <label><span style="color:#e81111">*</span>品名</label>
+                                <input id="textbox1"  name="textbox1" >
+                            </div>    
+
+                            <div>
+                                <label>规格</label>
+                                <input id="combobox1" name="combobox" value="1">
+                            </div>
+
+                            <div>
+                                <label>价格单位</label>
+                                <input id="combobox2" name="combobox" value="1">
+                            </div>
+
+                            <div>
+                                    <label>排序</label>
+                                    <input id="textbox2"  name="textbox2" >
+                            </div>
+                        </div> 
+
+                        <div class="row">        
+                                <div>
+                                    <label>是否启用</label>
+                                    <input id="combobox3" name="combobox" value="1">
+                                </div>
+
+                                <div>
+                                    <label>所属分类</label>
+                                    <input id="textbox3" name="textbox3" >
+                                </div>
+
+                                <div>
+                                    <label>成交量单位</label>
+                                    <input id="combobox4" name="combobox" value="1">
+                                </div> 
+                        </div>
+                    </div>
+                    <div class="list1">
+                        <p>预警设置（此5个条件全部设置或者全部不设置）</p>
+                        <div class="row1">      
+                            <div>    
+                                <label>连续数</label>
+                                <input id="textbox1"  name="textbox1" >
+                            </div>    
+
+                            <div>
+                                <label>周期</label>
+                                <input id="combobox5" name="combobox" value="1">
+                            </div>
+
+                            <div>
+                                <label>起始生效日期</label>
+                                <input id="datepicker1" >
+                            </div>
+
+                            
+                        </div> 
+
+                        <div class="row1">        
+                                <div>
+                                    <label >红灯警示限制(%)</label>
+                                    <input id="textbox2"  name="textbox2" >
+                                </div>
+                                <div>
+                                    <label>黄灯警示限制(%)</label>
+                                    <input id="textbox3" name="textbox3" >
+                                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+   
+    <!--copyright-->
+    <div class="page_foot">技术支持：上海中信信息发展股份有限公司</div>
+    <script type="text/javascript">
+		$(document).ready(function(){
+			$(".set_btn").click(function(){
+				$(".set_div").toggle(300);
+			});
+			$(".menu_1").click(function(){
+				$(".middle_menu_1").toggle(100);
+				$(".middle_menu_2,.middle_menu_3,.middle_menu_4,.middle_menu_5").hide();
+			});
+			$(".menu_2").click(function(){
+				$(".middle_menu_2").toggle(100);
+				$(".middle_menu_1,.middle_menu_3,.middle_menu_4,.middle_menu_5").hide();
+			});
+			$(".menu_3").click(function(){
+				$(".middle_menu_3").toggle(100);
+				$(".middle_menu_1,.middle_menu_2,.middle_menu_4,.middle_menu_5").hide();
+			});
+			$(".menu_4").click(function(){
+				$(".middle_menu_4").toggle(100);
+				$(".middle_menu_1,.middle_menu_2,.middle_menu_3,.middle_menu_5").hide();
+			});
+			$(".menu_5").click(function(){
+				$(".middle_menu_5").toggle(100);
+				$(".middle_menu_1,.middle_menu_2,.middle_menu_3,.middle_menu_4").hide();
+			});
+		});
+		
+	
+		  $('#textbox1,#textbox2,#textbox3,#textbox4,#textbox5,#textbox6').textbox({
+            readonly:false
+        });
+        $('#datepicker1,#datepicker2').datepicker({
+            readonly:false
+        });
+        $('#button1').button();
+        $('#button2').button();
+        $('#button3').button();
+        $('#combobox1').combobox({
+            valueField:'value',
+            textField:'text',
+            data:[{
+                "value":1,
+                "text":"散装"
+            },{
+                "value":2,
+                "text":"桶装"
+            },{
+                "value":3,
+                "text":"袋装"
+            }]
+        });
+        $('#combobox2').combobox({
+            valueField:'value',
+            textField:'text',
+            data:[{
+                "value":1,
+                "text":"元/公斤"
+            },{
+                "value":2,
+                "text":"元/斤"
+            },{
+                "value":3,
+                "text":"元/袋"
+            }]
+        });
+        $('#combobox3').combobox({
+            valueField:'value',
+            textField:'text',
+            data:[{
+                "value":1,
+                "text":"启用"
+            },{
+                "value":2,
+                "text":"不启用"
+            }]
+        });
+        $('#combobox4').combobox({
+            valueField:'value',
+            textField:'text',
+            data:[{
+                "value":1,
+                "text":"吨"
+            },{
+                "value":2,
+                "text":"千克"
+            }]
+        });
+         $('#combobox5').combobox({
+            valueField:'value',
+            textField:'text',
+            data:[{
+                "value":1,
+                "text":"月"
+            },{
+                "value":2,
+                "text":"日"
+            },{
+                "value":3,
+                "text":"年"
+            }]
+        });
+        //侧边的树结构
+        $('#cc').tree({ 
+                    showIcon : false,
+                    editable:false,
+                    data : [
+                            { name:"商品汇总", open:true,
+                                children: [
+                                    { name:"批发市场商品",open:true,
+                                        children: [
+                                                        { name:"蔬菜",open:true,
+                                                            children: [
+                                                                { name:"青菜"},
+                                                                { name:"鸡毛菜"},
+                                                                { name:"卷心菜"}
+                                                            ]
+                                                        },
+                                                        { name:"水果",open:false,
+                                                            children: [
+                                                                { name:"青菜"},
+                                                                { name:"鸡毛菜"},
+                                                                { name:"卷心菜"}
+                                                            ]},
+                                                        { name:"粮油",open:false,
+                                                            children: [
+                                                                { name:"青菜"},
+                                                                { name:"鸡毛菜"},
+                                                                { name:"卷心菜"}
+                                                            ]},
+                                                        { name:"畜产品",open:false,
+                                                            children: [
+                                                                { name:"青菜"},
+                                                                { name:"鸡毛菜"},
+                                                                { name:"卷心菜"}
+                                                            ]},
+                                                        { name:"淡水产品",open:false,
+                                                            children: [
+                                                                { name:"青菜"},
+                                                                { name:"鸡毛菜"},
+                                                                { name:"卷心菜"}
+                                                            ]},
+                                                        { name:"海产品",open:false,
+                                                            children: [
+                                                                { name:"青菜"},
+                                                                { name:"鸡毛菜"},
+                                                                { name:"卷心菜"}
+                                                            ]},
+                                                    ]
+                                           
+                                    }
+                                ]
+                            }
+                    ],
+                });
+	</script>
+</body>
+</html>

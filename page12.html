@@ -1,0 +1,346 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- 指定为谷歌内核 -->
+<meta name="renderer" content="webkit">
+<!-- 指定最新的ie内核 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/cui.css" rel="stylesheet"/>
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/cui.js"></script>
+<title>历年农产品价格同比分析</title>
+</head>
+<link rel="stylesheet" href="css/style.css">
+<style>
+    .col1 .sm1{
+        width: 15%;
+    }
+    .col1 .sm2{
+        width: 15%;
+    }
+    .col1 .sm3{
+        width: 25%;
+    }
+</style>
+<body>
+	<div class="top_menu">
+    	<div class="top_left">
+        	<img class="top_left_img1" src="images/logo.png">
+            <img class="top_left_img2" src="images/tittle.png">
+        </div>
+        <!--导航菜单-->
+        <div class="top_middle">
+        	<span class="menu_1">系统管理<img src="images/btn.png"></span>
+        	<span class="menu_2">价格信息采集<img src="images/btn.png"></span>
+        	<span class="menu_3">价格信息查询<img src="images/btn.png"></span>
+        	<span class="menu_4">价格预警<img src="images/btn.png"></span>
+        	<span class="menu_5">价格信息综合分析<img src="images/btn.png"></span>
+        </div>
+        <!--隐藏菜单-->
+        <div class="middle_menu_1">
+        	<a href="">用户管理</a>
+        	<a href="">角色管理</a>
+        	<a href="">菜单管理</a>
+        	<a href="">角色菜单管理</a>
+        	<a href="">市场设置</a>
+        	<a href="">商品设置</a>
+        	<a href="">代码维护</a>
+        	<a href="">任务设定及下发</a>
+        	<a href="">登录系统</a>
+        </div>
+        <div class="middle_menu_2">
+        	<a href="">批发价格填报</a>
+        	<a href="">价格数据审核</a>
+        </div>
+        <div class="middle_menu_3">
+        	<a href="">批发价格查询</a>
+        	<a href="">批发市场小类旬成交量分析</a>
+        	<a href="">批发市场小类月成交量分析</a>
+        	<a href="">批发市场大类旬成交量分析</a>
+        	<a href="">批发市场大类月成交量分析</a>
+        	<a href="">批发市场大类价格数据旬分析</a>
+        	<a href="">批发市场大类价格数据月分析</a>
+        	<a href="">批发市场小类月价格分析</a>
+        	<a href="">批发市场小类年价格分析</a>
+        	<a href="">批发市场大类月价格分析</a>
+        	<a href="">批发市场大类年价格分析</a>
+        </div>
+        <div class="middle_menu_4">
+        	<a href="">预警规则设置</a>
+        	<a href="">投诉建议处理</a>
+        	<a href="">价格预警和短信发送</a>
+        	<a href="">农产品价格短信预警（接口调用）</a>
+        </div>
+        <div class="middle_menu_5">
+        	<a href="">历年农产品价格同比分析</a>
+        	<a href="">农产品价格周期预测</a>
+        	<a href="">农产品价格走势预测</a>
+        	<a href="">市场横向对比分析</a>
+        	<a href="">涨跌预警</a>
+        	<a href="">采集任务预警</a>
+        	<a href="">采集任务情况分析</a>
+        	<a href="">济南市农产品价格周报</a>
+        	<a href="">济南市农产品价格月报</a>
+        	<a href="">济南市农产品价格年报</a>
+        	<a href="">行情简报</a>
+        	<a href="">气温与价格走势智能分析</a>
+        	<a href="">农产品进出口价格信息分析</a>
+        	<a href="">各国农产品进出口情况信息分析</a>
+        </div>
+        <!--个人设置-->
+        <div class="top_right">
+        	<a class="set_btn">
+            	<img src="images/user.png">
+                <span>admin超级管理员</span>
+            </a>
+            <div class="set_div">
+            	<a href="#">
+                    <img src="images/set.png">
+                    <span>账户管理</span>
+                </a>
+            	<a href="#">
+                    <img src="images/reset.png">
+                    <span>系统切换</span>
+                </a>
+            	<a href="#">
+                    <img src="images/out.png">
+                    <span>退出</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <style>
+		
+	</style>
+    <!--内容部分-->
+    <div style="width:100%; overflow-x:auto;">
+    	<div class="main_head">
+        	<img src="images/localion.png">
+            <span>当前位置：历年农产品价格同比分析</span>
+        </div>
+		<div class="main_form">
+			<div class="col2">
+                <label style="margin-right:30px;width:17%;" class="main_label">选择年度</label>
+                <div>
+	                <input id="checkbox1" name="checkbox" type="checkbox"/>
+	                <label >2017</label>
+                </div>
+                <div>
+	                <input id="checkbox2" name="checkbox" type="checkbox"/>
+	                <label >2016</label>
+                </div>
+                <div>
+	                <input id="checkbox3" name="checkbox" type="checkbox"/>
+	                <label >2015</label>
+                </div>	
+				<div>
+                	<input id="checkbox4" name="checkbox" type="checkbox"/>
+                	<label >2014</label>
+                </div>
+				<div>
+                	<input id="checkbox5" name="checkbox" type="checkbox"/>
+                	<label >2013</label>
+                </div>
+				<div>
+                	<input id="checkbox6" name="checkbox" type="checkbox"/>
+                	<label >2012</label>
+                </div>
+				<div>
+                	<input id="checkbox7" name="checkbox" type="checkbox"/>
+                	<label >2011</label>
+                </div>
+				<div>
+                	<input id="checkbox8" name="checkbox" type="checkbox"/>
+                	<label >2010</label>
+                </div>
+				<div>
+                	<input id="checkbox9" name="checkbox" type="checkbox"/>
+                	<label >2009</label>
+                </div>
+				<div>
+                	<input id="checkbox10" name="checkbox" type="checkbox"/>
+                	<label >2008</label>
+                </div>
+            </div>
+        	<div class="col1">
+                <label style="margin-right:30px;" class="main_label">选择品种</label>
+                <input id="combobox1" name="combobox" value="1">
+                <input id="combobox2" name="combobox" value="1">
+                <input id="combobox3" name="combobox" value="1">
+            </div>
+            <div class="col-main-4">
+                <button id="button1" class="main_btn" >统计(大)</button>
+                <button id="button2" class="main_btn" >统计(小)</button>
+            </div>
+
+        </div>
+    	<div class="ec1">
+               <div id="main01" style="width:80%;margin:20px auto;height:400px;"></div>
+               
+        </div>
+
+    </div>
+    
+    <!--copyright-->
+    <div class="page_foot">技术支持：上海中信信息发展股份有限公司</div>
+    
+    <script type="text/javascript">
+		$(document).ready(function(){
+			$(".set_btn").click(function(){
+				$(".set_div").toggle(300);
+			});
+			$(".menu_1").click(function(){
+				$(".middle_menu_1").toggle(100);
+				$(".middle_menu_2,.middle_menu_3,.middle_menu_4,.middle_menu_5").hide();
+			});
+			$(".menu_2").click(function(){
+				$(".middle_menu_2").toggle(100);
+				$(".middle_menu_1,.middle_menu_3,.middle_menu_4,.middle_menu_5").hide();
+			});
+			$(".menu_3").click(function(){
+				$(".middle_menu_3").toggle(100);
+				$(".middle_menu_1,.middle_menu_2,.middle_menu_4,.middle_menu_5").hide();
+			});
+			$(".menu_4").click(function(){
+				$(".middle_menu_4").toggle(100);
+				$(".middle_menu_1,.middle_menu_2,.middle_menu_3,.middle_menu_5").hide();
+			});
+			$(".menu_5").click(function(){
+				$(".middle_menu_5").toggle(100);
+				$(".middle_menu_1,.middle_menu_2,.middle_menu_3,.middle_menu_4").hide();
+			});
+		});
+		
+		$('#combobox1').combobox({
+			valueField:'value',
+			textField:'text',
+            componentCls:'sm1',
+			data:[{
+				"value":1,
+				"text":"蔬菜"
+			},{
+				"value":2,
+				"text":"水果"
+			},{
+                "value":3,
+                "text":"食用菌"
+            }]
+
+		});
+        $('#combobox2').combobox({
+            valueField:'value',
+            textField:'text',
+            componentCls:'sm2',
+            data:[{
+                "value":1,
+                "text":"菠菜"
+            },{
+                "value":2,
+                "text":"西兰花"
+            },{
+                "value":3,
+                "text":"番茄"
+            }]
+        });
+        $('#combobox3').combobox({
+            valueField:'value',
+            textField:'text',
+            componentCls:'sm3',
+            data:[{
+                "value":1,
+                "text":"七里堡蔬菜水果批发市场"
+            },{
+                "value":2,
+                "text":"七里堡蔬果批发市场"
+            },{
+                "value":3,
+                "text":"七里堡果批发市场"
+            }]
+        });
+		$('#textbox1,#textbox2').textbox({
+			readonly:false
+		});
+		$('#datepicker1,#datepicker2').datepicker({
+			readonly:false
+		});
+		$('#button1').button();
+		$('#button2').button();
+		$('#checkbox1').checkbox();
+        $('#checkbox2').checkbox();
+        $('#checkbox3').checkbox();
+        $('#checkbox4').checkbox();
+        $('#checkbox5').checkbox();
+         $('#checkbox6').checkbox();
+		$('#checkbox7').checkbox();
+        $('#checkbox8').checkbox();
+        $('#checkbox9').checkbox();
+        $('#checkbox10').checkbox();
+		
+	</script>
+    <script type="text/javascript" src="js/echarts.min.js"></script>
+    <script type="text/javascript">
+             // 基于准备好的dom，初始化echarts实例
+    var myChart01 = echarts.init(document.getElementById('main01'));
+    // 指定图表的配置项和数据
+    var option = {
+    title: {
+        text: '数据填报完成率'
+    },
+    tooltip: {
+        trigger: 'axis'
+    },
+    legend: {
+        data:['2017','2016','2015','2014']
+    },
+    grid: {
+        left: '1%',
+        right: '4%',
+        bottom: '1%',
+        containLabel: true
+    },
+    
+    xAxis: {
+        type: 'category',
+        boundaryGap: false,
+        data: ['1-1','1-21','2-10','3-2','3-22','4-11','5-1','5-21','6-10','6-30','7-20','8-9','8-29','9-18','10-8','10-28','11-17','12-7','12-27']
+    },
+    yAxis: {
+        type: 'value',
+        splitNumber:10,
+        min:[0],
+        max:[18]
+    },
+    series: [
+        {
+            name:'2017',
+            type:'line',
+            data:[2, 4, 6, 12, 12, 10, 16,12,4,5,3,6,12, 10, 16,12,2, 10, 16,12]
+        },
+        {
+            name:'2016',
+            type:'line',
+            data:[6, 4, 6, 12, 12, 10, 16,12,4,5,3,6,1, 10, 16,12,2, 10, 13,12]
+        },
+        {
+            name:'2015',
+            type:'line',
+            data:[5, 4, 6, 8, 11, 10, 16,12,4,5,3,6,1, 10, 5,12,2, 10, 13,12]
+        },
+        {
+            name:'2014',
+            type:'line',
+            data:[5, 4, 6, 12, 9, 16, 12,12,4,1,3,6,1, 10, 8,12,2, 6, 13,12]
+        }
+    ]
+};
+
+    //总数 2562
+    
+    // 使用刚指定的配置项和数据显示图表。
+    myChart01.setOption(option); 
+    </script>
+</body>
+</html>

@@ -1,0 +1,286 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- 指定为谷歌内核 -->
+<meta name="renderer" content="webkit">
+<!-- 指定最新的ie内核 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/cui.css" rel="stylesheet"/>
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/cui.js"></script>
+<title>批发市场大类价格数据旬分析</title>
+</head>
+<link rel="stylesheet" href="css/style.css">
+<style>
+
+</style>
+<body>
+	<div class="top_menu">
+    	<div class="top_left">
+        	<img class="top_left_img1" src="images/logo.png">
+            <img class="top_left_img2" src="images/tittle.png">
+        </div>
+        <!--导航菜单-->
+        <div class="top_middle">
+        	<span class="menu_1">系统管理<img src="images/btn.png"></span>
+        	<span class="menu_2">价格信息采集<img src="images/btn.png"></span>
+        	<span class="menu_3">价格信息查询<img src="images/btn.png"></span>
+        	<span class="menu_4">价格预警<img src="images/btn.png"></span>
+        	<span class="menu_5">价格信息综合分析<img src="images/btn.png"></span>
+        </div>
+        <!--隐藏菜单-->
+        <div class="middle_menu_1">
+        	<a href="">用户管理</a>
+        	<a href="">角色管理</a>
+        	<a href="">菜单管理</a>
+        	<a href="">角色菜单管理</a>
+        	<a href="">市场设置</a>
+        	<a href="">商品设置</a>
+        	<a href="">代码维护</a>
+        	<a href="">任务设定及下发</a>
+        	<a href="">登录系统</a>
+        </div>
+        <div class="middle_menu_2">
+        	<a href="">批发价格填报</a>
+        	<a href="">价格数据审核</a>
+        </div>
+        <div class="middle_menu_3">
+        	<a href="">批发价格查询</a>
+        	<a href="">批发市场小类旬成交量分析</a>
+        	<a href="">批发市场小类月成交量分析</a>
+        	<a href="">批发市场大类旬成交量分析</a>
+        	<a href="">批发市场大类月成交量分析</a>
+        	<a href="">批发市场大类价格数据旬分析</a>
+        	<a href="">批发市场大类价格数据月分析</a>
+        	<a href="">批发市场小类月价格分析</a>
+        	<a href="">批发市场小类年价格分析</a>
+        	<a href="">批发市场大类月价格分析</a>
+        	<a href="">批发市场大类年价格分析</a>
+        </div>
+        <div class="middle_menu_4">
+        	<a href="">预警规则设置</a>
+        	<a href="">投诉建议处理</a>
+        	<a href="">价格预警和短信发送</a>
+        	<a href="">农产品价格短信预警（接口调用）</a>
+        </div>
+        <div class="middle_menu_5">
+        	<a href="">历年农产品价格同比分析</a>
+        	<a href="">农产品价格周期预测</a>
+        	<a href="">农产品价格走势预测</a>
+        	<a href="">市场横向对比分析</a>
+        	<a href="">涨跌预警</a>
+        	<a href="">采集任务预警</a>
+        	<a href="">采集任务情况分析</a>
+        	<a href="">济南市农产品价格周报</a>
+        	<a href="">济南市农产品价格月报</a>
+        	<a href="">济南市农产品价格年报</a>
+        	<a href="">行情简报</a>
+        	<a href="">气温与价格走势智能分析</a>
+        	<a href="">农产品进出口价格信息分析</a>
+        	<a href="">各国农产品进出口情况信息分析</a>
+        </div>
+        <!--个人设置-->
+        <div class="top_right">
+        	<a class="set_btn">
+            	<img src="images/user.png">
+                <span>admin超级管理员</span>
+            </a>
+            <div class="set_div">
+            	<a href="#">
+                    <img src="images/set.png">
+                    <span>账户管理</span>
+                </a>
+            	<a href="#">
+                    <img src="images/reset.png">
+                    <span>系统切换</span>
+                </a>
+            	<a href="#">
+                    <img src="images/out.png">
+                    <span>退出</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <style>
+		
+	</style>
+    <!--内容部分-->
+    <div style="width:100%; overflow-x:auto;">
+    	<div class="main_head">
+        	<img src="images/localion.png">
+            <span>当前位置：批发市场大类价格数据旬分析</span>
+        </div>
+		<div class="main_form">
+            <div class="col-main-4">
+                <label class="main_label">批发市场名称</label>
+                <input id="combobox1" name="combobox" value="1">
+            </div>
+            <div class="col-main-4">
+                <label class="main_label">种类</label>
+                <input id="textbox1" type="text" name="textbox">
+            </div>
+
+        	<div class="col-main-4">
+                <label style="width:40%;" class="main_label">日期（每月1,11,21日）</label>
+                <input id="datepicker1" name="datepicker" value="">
+            </div>
+            <div class="col-main-4" >
+                <button id="button1" class="main_btn" >查询</button>
+                <button id="button2" class="main_btn" >导出</button>
+            </div>
+        </div>
+        <div>
+    	<div style="width:95%;margin:0 auto;overflow-x: scroll;">
+            <table class="table table-bordered table-fixed" style="width:2000px;">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="gree"  style="width:140px;padding-left:0;padding-right:0;">旬信息（旬均价单位:</td>
+                    <td class="gree" style="border-left:none;width:143px;padding-left:0;padding-right:0;">元/5L；其他:元/公斤）</td>
+                    <td class="pur"></td>
+                    <td class="pur"></td>
+                    <td class="pur">环比信息</td>
+                    <td class="pur"></td>
+                    <td class="pur"></td>
+                    <td class="qin"></td>
+                    <td class="qin"></td>
+                    <td class="qin">同比信息</td>
+                    <td class="qin"></td>
+                    <td class="qin"></td>
+                </tr>
+            	<tr>
+                	<th>市场名称</th>
+                	<th>类名</th>
+                    <th>品种总数(个)</th>
+                	<th>日期</th>
+                    <th>旬平均价格</th>
+                	<th>旬环比（%）</th>
+                    <th>与上旬相比上涨品种数(个)</th>
+                    <th>平均涨幅(%)</th>
+                    <th>与上旬相比下降品种数(个)</th>
+                    <th>平均涨幅(%)</th>
+                    <th>旬同比(%)</th>
+                    <th>同期相比上涨品种数(个)</th>
+                    <th>平均涨幅(%)</th>
+                    <th>同期相比下降品种数(个)</th>
+                    <th>平均涨幅(%)</th>
+                </tr>
+                <tr>
+                	<td>一级市场</td>
+                    <td>粮食</td>
+                    <td>6</td>
+                    <td>2016-12-31</td>
+                    <td>4.50</td>
+                    <td>0.00%</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>-0.53%</td>
+                    <td>2</td>
+                    <td>1.85%</td>
+                    <td>3</td>
+                    <td></td>
+                </tr>
+                <tr>
+                	<td>所有市场</td>
+                    <td>粮食</td>
+                    <td>6</td>
+                    <td>2016-12-31</td>
+                    <td>4.55</td>
+                    <td>0.22%</td>
+                    <td>3</td>
+                    <td>0.42%</td>
+                    <td>1</td>
+                    <td>-0.19%</td>
+                    <td>-0.02%</td>
+                    <td>2</td>
+                    <td>3.72%</td>
+                    <td>3</td>
+                    <td></td>
+                </tr>
+                <tr>
+                	<td>一级市场</td>
+                    <td>粮食</td>
+                    <td>6</td>
+                    <td>2016-12-31</td>
+                    <td>4.50</td>
+                    <td>0.00%</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>-0.53%</td>
+                    <td>2</td>
+                    <td>1.85%</td>
+                    <td>3</td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div style="margin:30px 0 0 55px;">
+        <p style="font-size:12px;color:#cc0000;width:800px;line-height:24px;">
+            注： 一级市场：上海江桥批发市场、上海江杨农产品批发市场、东方国际水产中心、上海农产品中心批发市场(猪肉).</br>
+      二级市场：上海农产品中心批发市场、上海七宝农副产品综合交易市场.
+        </p>
+    </div>
+    
+    <!--copyright-->
+    <div class="page_foot">技术支持：上海中信信息发展股份有限公司</div>
+    
+    <script type="text/javascript">
+		$(document).ready(function(){
+			$(".set_btn").click(function(){
+				$(".set_div").toggle(300);
+			});
+			$(".menu_1").click(function(){
+				$(".middle_menu_1").toggle(100);
+				$(".middle_menu_2,.middle_menu_3,.middle_menu_4,.middle_menu_5").hide();
+			});
+			$(".menu_2").click(function(){
+				$(".middle_menu_2").toggle(100);
+				$(".middle_menu_1,.middle_menu_3,.middle_menu_4,.middle_menu_5").hide();
+			});
+			$(".menu_3").click(function(){
+				$(".middle_menu_3").toggle(100);
+				$(".middle_menu_1,.middle_menu_2,.middle_menu_4,.middle_menu_5").hide();
+			});
+			$(".menu_4").click(function(){
+				$(".middle_menu_4").toggle(100);
+				$(".middle_menu_1,.middle_menu_2,.middle_menu_3,.middle_menu_5").hide();
+			});
+			$(".menu_5").click(function(){
+				$(".middle_menu_5").toggle(100);
+				$(".middle_menu_1,.middle_menu_2,.middle_menu_3,.middle_menu_4").hide();
+			});
+		});
+		
+		$('#combobox1').combobox({
+			valueField:'value',
+			textField:'text',
+			data:[{
+				"value":1,
+				"text":"全部市场"
+			},{
+				"value":2,
+				"text":"部分市场"
+			}]
+		});
+		$('#textbox1,#textbox2').textbox({
+			readonly:false
+		});
+		$('#datepicker1,#datepicker2').datepicker({
+			readonly:false
+		});
+		$('#button1').button();
+		$('#button2').button();
+		
+		
+	</script>
+</body>
+</html>
